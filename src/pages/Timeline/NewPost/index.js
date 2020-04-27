@@ -14,7 +14,6 @@ export default function NewPost({ onPress, value, onChangeText }) {
           returnKeyType="done"
           value={value}
           onChangeText={onChangeText}
-          onSubmitEditing={onPress}
           maxLength={280}
         />
         <SubmitButton onPress={onPress} name="ios-send" />

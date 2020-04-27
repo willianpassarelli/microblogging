@@ -7,7 +7,7 @@ export const Container = styled.SafeAreaView`
 
 export const Header = styled.View`
   background: #7329f8;
-  height: 30%;
+  height: 250px;
   margin: 8px;
   padding: 20px;
   border-radius: 25px;
@@ -63,7 +63,7 @@ export const ContainerButton = styled.View`
   position: absolute;
   left: 0;
   right: 30px;
-  bottom: 40px;
+  bottom: 30px;
 `;
 
 export const BubbleButton = styled.TouchableOpacity`
@@ -74,4 +74,5 @@ export const BubbleButton = styled.TouchableOpacity`
   justify-content: center;
   border-radius: 50px;
   box-shadow: 0px 0px 5px #ccc;
+  elevation: 1;
 `;

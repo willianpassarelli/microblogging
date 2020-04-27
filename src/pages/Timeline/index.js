@@ -66,6 +66,7 @@ export default function Timeline() {
       }
       Keyboard.dismiss();
     } else {
+      setActive(false);
       Alert.alert('Campo obrigatório', 'Digite uma mensagem.');
     }
   }
@@ -136,11 +137,13 @@ export default function Timeline() {
           />
         )}
       />
-      <ContainerButton>
-        <BubbleButton onPress={() => setActive(!active)}>
-          <Icon name="ios-chatbubbles" size={28} color="#ccc" />
-        </BubbleButton>
-      </ContainerButton>
+      {active === false && (
+        <ContainerButton>
+          <BubbleButton onPress={() => setActive(!active)}>
+            <Icon name="ios-chatbubbles" size={28} color="#ccc" />
+          </BubbleButton>
+        </ContainerButton>
+      )}
     </Container>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Alert } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { signUpRequest } from '~/store/modules/auth/actions';
@@ -24,7 +25,11 @@ export default function SignUp({ navigation }) {
   const { loading } = useSelector(state => state.auth);
 
   function handleSubmit() {
-    dispatch(signUpRequest(name, email, password));
+    if (name === '' || email === '' || password === '') {
+      Alert.alert('Cadastro', 'Todos os campos são obrigatórios');
+    } else {
+      dispatch(signUpRequest(name, email, password));
+    }
   }
 
   return (

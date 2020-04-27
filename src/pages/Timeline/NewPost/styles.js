@@ -1,8 +1,12 @@
+import { Platform } from 'react-native';
 import styled from 'styled-components/native';
 import Input from '~/components/Input';
 import Button from '../Button';
 
-export const Container = styled.View`
+export const Container = styled.KeyboardAvoidingView.attrs({
+  enabled: Platform.OS === 'ios',
+  behavior: 'padding',
+})`
   padding: 5px 20px;
 `;
 

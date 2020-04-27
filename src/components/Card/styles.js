@@ -46,5 +46,5 @@ export const Actions = styled.View`
 `;
 
 export const ActionButton = styled.TouchableOpacity`
-  padding: 5px;
+  padding: 5px 10px;
 `;
